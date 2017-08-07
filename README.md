@@ -22,3 +22,14 @@
 └── wallets
 
 ```
+
+## Usage
+```shell
+git clone https://github.com/ohmountain/dna-compose
+cd dna-compose
+mkdir -p log/Log_01 log/Log_02 log/Log_03 log/Log_04
+mkdir -p chain/Chain_01 chain/Chain_02 chain/Chain_03 chain/Chain_04
+mkdir wallets
+
+compose-up
+```
