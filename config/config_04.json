@@ -1,0 +1,34 @@
+﻿{
+  "Configuration": {
+    "Magic": 7630401,
+    "Version": 23,
+    "SeedList": [
+      "dna_01:21338"
+    ],
+    "BookKeepers": [
+      "039394127104377811af0f58e0fc4f406e2c1a503de7b7e634c82118a6c490cb9d",
+      "02b1ed8b2ae6b142ebf177c1e3cc821b7b6c2155e9ccd60c0938677e7c288704c4",
+      "0237a4d938bd52ffab60336795667bc691a35b218ed2345ec68c6cbe5450cf8694",
+      "02b2fc6b364b6cffa5436ddef35136bd5b65e26f5fdb9ae69b046f44804b64134a"
+    ],
+	"StatesUpdater": [
+    "039394127104377811af0f58e0fc4f406e2c1a503de7b7e634c82118a6c490cb9d",
+    "02b1ed8b2ae6b142ebf177c1e3cc821b7b6c2155e9ccd60c0938677e7c288704c4",
+    "0237a4d938bd52ffab60336795667bc691a35b218ed2345ec68c6cbe5450cf8694",
+    "02b2fc6b364b6cffa5436ddef35136bd5b65e26f5fdb9ae69b046f44804b64134a"
+	],
+    "HttpRestPort": 24334,
+    "HttpWsPort":24335,
+    "HttpJsonPort": 24336,
+    "HttpLocalPort": 24337,
+    "NoticeServerUrl":"",
+    "OauthServerUrl":"",
+    "NodePort": 24338,
+    "PrintLevel": 1,
+    "IsTLS": false,
+    "CertPath": "./sample-cert.pem",
+    "KeyPath": "./sample-cert-key.pem",
+    "CAPath": "./sample-ca.pem",
+    "MultiCoreNum": 4
+  }
+}
