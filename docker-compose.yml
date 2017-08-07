@@ -1,0 +1,68 @@
+dna_01:
+  image: renshan/dna:1.0
+  working_dir: /var/DNASample 
+  command: ./DNA -p=passwordtest
+  volumes:
+    - ./config/config_01.json:/var/DNASample/config.json:ro
+    - ./wallets/wallet_01.dat:/var/DNASample/wallet.dat
+    - ./log/Log_01:/var/DNASample/Log
+    - ./chain/Chain_01:/var/DNASample/Chain
+  ports:
+    - "21338:21338"
+
+dna_02:
+  image: renshan/dna:1.0
+  working_dir: /var/DNASample 
+  command: ./DNA -p=passwordtest
+  volumes:
+    - ./config/config_02.json:/var/DNASample/config.json:ro
+    - ./wallets/wallet_02.dat:/var/DNASample/wallet.dat
+    - ./log/Log_02:/var/DNASample/Log
+    - ./chain/Chain_02:/var/DNASample/Chain
+  ports:
+    - "22338:22338"
+  links:
+    - dna_01
+
+dna_03:
+  image: renshan/dna:1.0
+  working_dir: /var/DNASample 
+  command: ./DNA -p=passwordtest
+  volumes:
+    - ./config/config_03.json:/var/DNASample/config.json:ro
+    - ./wallets/wallet_03.dat:/var/DNASample/wallet.dat
+    - ./log/Log_03:/var/DNASample/Log
+    - ./chain/Chain_03:/var/DNASample/Chain
+  ports:
+    - "23338:23338"
+  links:
+    - dna_01
+    - dna_02
+
+dna_04:
+  image: renshan/dna:1.0
+  working_dir: /var/DNASample 
+  command: ./DNA -p=passwordtest
+  volumes:
+    - ./config/config_04.json:/var/DNASample/config.json:ro
+    - ./wallets/wallet_04.dat:/var/DNASample/wallet.dat
+    - ./log/Log_04:/var/DNASample/Log
+    - ./chain/Chain_04:/var/DNASample/Chain
+  ports:
+    - "24338:24338"
+  links:
+    - dna_01
+    - dna_02
+    - dna_03
+
+# dna_mysql:
+#   image: mysql
+#   environment:
+#     MYSQL_ROOT_PASSWORD: 123456
+#     MYSQL_DATABASE: bapp
+#   # ports:
+#   #   - "3603:3306"
+#   volumes:
+#     - ./data/mysql:/var/lib/mysql
+#     - ./data/source:/data/mysql:ro
+#     - ./config/mysqld.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf:ro
